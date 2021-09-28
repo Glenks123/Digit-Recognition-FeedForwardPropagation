@@ -13,7 +13,7 @@ fprintf('Loading and Visualizing Data ...\n')
 
 load('data.mat');
 m = size(X, 1);
-% X has a dimension of 5000 x 400. Meaning 5000 training examples and 400 grayscale values for each pixel in one image image
+% X has a dimension of 5000 x 400.
 
 % Randomly select 100 data points to display
 sel = randperm(size(X, 1));
@@ -33,7 +33,6 @@ fprintf('\nLoading Saved Neural Network Parameters ...\n')
 load('weights.mat');
 
 % computing the accuracy of the training set
-% here we are passing in our entire training set as X
 pred = predict(Theta1, Theta2, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
